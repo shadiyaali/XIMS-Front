@@ -110,6 +110,13 @@ import QmsDraftCompliance from "./pages/QMS/Compliance/Compliance/QmsDraftCompli
 import QmsViewCompliance from "./pages/QMS/Compliance/Compliance/QmsViewCompliance";
 import QmsEditDraftCompliance from "./pages/QMS/Compliance/Compliance/QmsEditDraftCompliance";
 import QmsDraftViewCompliance from "./pages/QMS/Compliance/Compliance/QmsDraftViewCompliance";
+import QmsListLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequirements/QmsListLegalRequirements";
+import QmsAddLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequirements/QmsAddLegalRequirements";
+import QmsEditLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequirements/QmsEditLegalRequirements";
+import QmsViewLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequirements/QmsViewLegalRequirements";
+import QmsDraftLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequirements/QmsDraftLegalRequirements";
+import QmsDraftViewLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequirements/QmsDraftViewLegalRequirements";
+import QmsDraftEditLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequirements/QmsDraftEditLegalRequirements";
 
 const ThemedApp = () => {
   const { theme } = useTheme();
@@ -181,6 +188,14 @@ const ThemedApp = () => {
           <Route path="qms/view-compliance/:id" element={<QmsViewCompliance />} />
           <Route path="qms/edit-draft-compliance/:id" element={<QmsEditDraftCompliance />} />
           <Route path="qms/view-draft-compliance/:id" element={<QmsDraftViewCompliance />} />
+
+          <Route path="qms/list-legal-requirements" element={<QmsListLegalRequirements/>} />
+           <Route path="qms/add-legal-requirements" element={<QmsAddLegalRequirements/>} />
+           <Route path="qms/edit-legal-requirements/:id" element={<QmsEditLegalRequirements/>} />
+           <Route path="qms/view-legal-requirements/:id" element={<QmsViewLegalRequirements/>} />
+           <Route path="qms/draft-legal-requirements" element={<QmsDraftLegalRequirements/>} />
+           <Route path="qms/view-draft-legal-requirements/:id" element={<QmsDraftViewLegalRequirements/>} />
+           <Route path="qms/edit-draft-legal-requirements/:id" element={<QmsDraftEditLegalRequirements/>} />
 
 
           {/* QMS User Management */}

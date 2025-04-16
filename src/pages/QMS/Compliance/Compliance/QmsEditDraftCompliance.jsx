@@ -210,7 +210,7 @@ const QmsEditDraftCompliance = () => {
                 name="compliance_no"
                 value={formData.compliance_no || ""}
                 onChange={handleInputChange}
-                required
+            
                 className="w-full add-compliance-inputs"
               />
             </div>

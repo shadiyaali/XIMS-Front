@@ -113,24 +113,22 @@ const QmsEditCompliance = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
- 
     const submitData = new FormData();
     
- 
+   
     if (formData.day && formData.month && formData.year) {
       const formattedDate = `${formData.year}-${formData.month.padStart(2, '0')}-${formData.day.padStart(2, '0')}`;
       submitData.append('date', formattedDate);
     }
     
-   
-    Object.keys(formData).forEach(key => {
+     
+    if (formData.attach_document && typeof formData.attach_document === 'object') {
+      submitData.append('attach_document', formData.attach_document);
+    }
  
-      if (!['day', 'month', 'year'].includes(key) && formData[key] !== null) {
-        if (key === 'attach_document' && typeof formData[key] === 'object') {
-          submitData.append(key, formData[key]);
-        } else if (typeof formData[key] !== 'object') {
-          submitData.append(key, formData[key]);
-        }
+    Object.keys(formData).forEach(key => {
+      if (!['day', 'month', 'year', 'attach_document'].includes(key) && formData[key] !== null) {
+        submitData.append(key, formData[key]);
       }
     });
     
@@ -147,7 +145,7 @@ const QmsEditCompliance = () => {
       console.error("Error updating compliance:", err);
       setError("Failed to update compliance");
     }
-  };
+};
 
   const handleListCompliance = () => {
     navigate("/company/qms/list-compliance");
