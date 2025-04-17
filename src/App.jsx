@@ -117,6 +117,20 @@ import QmsViewLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequir
 import QmsDraftLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequirements/QmsDraftLegalRequirements";
 import QmsDraftViewLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequirements/QmsDraftViewLegalRequirements";
 import QmsDraftEditLegalRequirements from "./pages/QMS/Compliance/LegalAndOtherRequirements/QmsDraftEditLegalRequirements";
+import QmsListEvaluationCompliance from "./pages/QMS/Compliance/EvaluationOfCompliance/QmsListEvaluationCompliance";
+import QmsAddEvaluationCompliance from "./pages/QMS/Compliance/EvaluationOfCompliance/QmsAddEvaluationCompliance";
+import QmsEditEvaluationCompliance from "./pages/QMS/Compliance/EvaluationOfCompliance/QmsEditEvaluationCompliance";
+import QmsViewEvaluationCompliance from "./pages/QMS/Compliance/EvaluationOfCompliance/QmsViewEvaluationCompliance";
+import QmsDraftEvaluationCompliance from "./pages/QMS/Compliance/EvaluationOfCompliance/QmsDraftEvaluationCompliance";
+import QmsViewDraftEvaluationCompliance from "./pages/QMS/Compliance/EvaluationOfCompliance/QmsViewDraftEvaluationCompliance";
+import QmsEditDraftEvaluationCompliance from "./pages/QMS/Compliance/EvaluationOfCompliance/QmsEditDraftEvaluationCompliance";
+import QmsListManagementChange from "./pages/QMS/Compliance/ManagementOfChange/QmsListManagementChange";
+import QmsAddmanagementChange from "./pages/QMS/Compliance/ManagementOfChange/QmsAddmanagementChange";
+import QmsEditManagementChange from "./pages/QMS/Compliance/ManagementOfChange/QmsEditManagementChange";
+import QmsViewManagementChange from "./pages/QMS/Compliance/ManagementOfChange/QmsViewManagementChange";
+import QmsDraftManagementChange from "./pages/QMS/Compliance/ManagementOfChange/QmsDraftManagementChange";
+import QmsEditDraftManagementChange from "./pages/QMS/Compliance/ManagementOfChange/QmsEditDraftManagementChange";
+import QmsViewDraftManagementChange from "./pages/QMS/Compliance/ManagementOfChange/QmsViewDraftManagementChange";
 
 const ThemedApp = () => {
   const { theme } = useTheme();
@@ -197,6 +211,24 @@ const ThemedApp = () => {
            <Route path="qms/view-draft-legal-requirements/:id" element={<QmsDraftViewLegalRequirements/>} />
            <Route path="qms/edit-draft-legal-requirements/:id" element={<QmsDraftEditLegalRequirements/>} />
 
+
+          <Route path="qms/list-evaluation-compliance" element={<QmsListEvaluationCompliance />} />
+          <Route path="qms/add-evaluation-compliance" element={<QmsAddEvaluationCompliance />} />
+          <Route path="qms/edit-evaluation-compliance" element={<QmsEditEvaluationCompliance />} />
+          <Route path="qms/view-evaluation-compliance" element={<QmsViewEvaluationCompliance />} />
+          <Route path="qms/draft-evaluation-compliance" element={<QmsDraftEvaluationCompliance />} />
+          <Route path="qms/edit-draft-evaluation-compliance" element={<QmsEditDraftEvaluationCompliance />} />
+          <Route path="qms/view-draft-evaluation-compliance" element={<QmsViewDraftEvaluationCompliance />} />
+
+
+
+          <Route path="qms/list-management-change" element={<QmsListManagementChange />} />
+          <Route path="qms/add-management-change" element={<QmsAddmanagementChange />} />
+          <Route path="qms/edit-management-change/:id" element={<QmsEditManagementChange />} />
+          <Route path="qms/view-management-change/:id" element={<QmsViewManagementChange />} />
+          <Route path="qms/draft-management-change" element={<QmsDraftManagementChange />} />
+          <Route path="qms/edit-draft-management-change/:id" element={<QmsEditDraftManagementChange />} />
+          <Route path="qms/view-draft-management-change/:id" element={<QmsViewDraftManagementChange />} />
 
           {/* QMS User Management */}
           <Route path="qms/adduser" element={<QMSAddUser />} />
